@@ -11,7 +11,6 @@ require_once './middleware/MWparaCORS.php';
 /////////////////////////////   entities  /////////////////////////////////
 //-----------------------------------------------------------------------//
 require './entities/usuario/userApi.php';
-require './entities/mensaje/mensajeApi.php';
 //-----------------------------------------------------------------------//
 
 
@@ -44,14 +43,6 @@ $app->group('/user', function () {
       "userName":"ddebrito",
       "pass":"1388"
     } */
-});
-
-$app->group('/mensajes', function () {
-  $this->get('/', \mensajeApi::class . ':readAllApi');
-  $this->get('/{id}', \mensajeApi::class . ':readApi');
-  $this->post('/', \mensajeApi::class . ':createApi');
-  $this->delete('/{id}[/]', \mensajeApi::class . ':deleteApi');
-  $this->post('/update', \mensajeApi::class . ':updateApi');
 });
 
 $app->add(function ($req, $res, $next) {
