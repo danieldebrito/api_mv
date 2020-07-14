@@ -13,7 +13,7 @@ class mensaje
 		try {
 			$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
 			$consulta = $objetoAccesoDato->RetornarConsulta(
-				"SELECT * FROM `mensajes` WHERE 1 ORDER BY `fecha` DESC"
+				"SELECT * FROM `mensajes` WHERE 1"
 			);
 			$consulta->execute();
 					
