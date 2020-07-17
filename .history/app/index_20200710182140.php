@@ -41,8 +41,8 @@ $app->group('/user', function () {
 
   /* body + raw  + 
     {
-      "userName":"ddebrito",
-      "pass":"1388"
+      "usuario":"ddebrito",
+      "password":"1388"
     } */
 });
 
